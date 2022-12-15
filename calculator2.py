@@ -5,10 +5,9 @@ from arithmetic import (add, subtract, multiply, divide, square, cube,
 
 
 # Replace this with your code
-while True:
-    user_input = input("Enter an operation and numbers or enter q to quit: ")
-    tokens = user_input.split()
-    if user_input == "q" or user_input == "quit":
+for line in open("inputs.txt"):
+    tokens = line.split()
+    if tokens[0] == "q" or tokens[0] == "quit":
         break
 
     elif tokens[0] == "add":
@@ -64,4 +63,5 @@ while True:
     else:
         print("Please enter a valid input")
         print()
-        continue
+
+"inputs.txt".close()
